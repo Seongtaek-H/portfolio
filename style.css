@@ -10,6 +10,7 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
+  --color-deepblue: #072a6c;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -25,11 +26,25 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
 }
 
 /* Universal tage */
 * {
   box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 /* Typrography */
@@ -56,4 +71,42 @@ P {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 8px 0;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-deepblue);
+  align-items: center;
+  color: var(--color-white);
+  padding: 16px;
+}
+#navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+#navbar__logo a {
+  color: var(--color-white);
+}
+.navbar__menu {
+  display: flex;
+}
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+.navbar__menu__item:hover {
+  background-color: var(--color-blue);
+}
+
+/* Work */
+.project__image {
+  width: 30%;
+  height: 30%;
 }
