@@ -96,6 +96,8 @@ P {
 }
 #navbar__logo a {
   color: var(--color-white);
+  position: relative;
+  bottom: 6px;
 }
 .navbar__menu {
   display: flex;
@@ -114,7 +116,8 @@ P {
 }
 /* Home */
 #home {
-  background: url(./imgs/home-background.png) center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./imgs/home-background.png) center/cover no-repeat;
   padding: 40px;
   text-align: center;
 }
@@ -135,6 +138,35 @@ P {
   margin: 24px;
   padding: 8px 12px;
   border: 2px solid var(--color-white);
+}
+
+/* section common */
+.section {
+  padding: 50px;
+  margin: auto;
+  max-width: 1400px;
+}
+
+/* About */
+.about__job,
+.about__edu {
+  margin-top: 40px;
+}
+.job__table td {
+  padding: 15px;
+  vertical-align: top;
+}
+.company {
+  text-align: center;
+}
+.edu {
+  text-align: center;
+  width: 100px;
+}
+
+/* Skill */
+#skills {
+  background-color: var(--color-yellow);
 }
 
 /* Work */
