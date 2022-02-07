@@ -168,9 +168,101 @@ P {
 #skills {
   background-color: var(--color-yellow);
 }
+.skillset {
+  display: flex;
+  background-color: var(--color-grey);
+  text-align: center;
+  color: var(--color-white);
+  margin: 20px 0;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+.skill {
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.skill__bar {
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-grey);
+}
+.skill__value {
+  height: 5px;
+  background-color: var(--color-orange);
+}
+.skillset__right {
+  flex-basis: 40%;
+}
+.skillset__title {
+  color: var(--color-white);
+}
+.tools,
+.etc {
+  padding: 20px;
+}
+.tools {
+  background-color: var(--color-light-grey);
+}
+.etc {
+  background-color: var(--color-grey);
+  height: 40%;
+}
 
 /* Work */
-.project__image {
+.work__projects {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project {
   width: 30%;
-  height: 30%;
+  margin: 0 20px;
+  position: relative;
+  background-color: var(--color-white);
+}
+.project__image {
+  width: 100%;
+  height: 100%;
+}
+.project__description {
+  text-align: center;
+  position: absolute;
+  background-color: black;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  border: 0.5px solid;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.2s ease-in;
+}
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+.project__description h3 {
+  color: var(--color-white);
+}
+.project__description h3::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 45%;
+  margin: 10px 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-dark-white);
 }
