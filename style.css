@@ -326,4 +326,7 @@ P {
   .active {
     border: none;
   }
+  #home {
+    padding-top: 400px;
+  }
 }
