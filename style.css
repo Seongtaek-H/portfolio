@@ -50,6 +50,7 @@ li {
 }
 button {
   background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -116,7 +117,8 @@ P {
 }
 .navbar__toggle-btn {
   position: absolute;
-  right: 32px;
+  top: 20px;
+  right: 20px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -306,6 +308,27 @@ P {
 }
 .contact__title {
   margin: 20px 0;
+}
+
+/* arrow-up btn */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 55px;
+  height: 55px;
+  font-size: var(--font-medium);
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease-in;
+}
+.arrow-up.visible {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* below 768px screen width */
