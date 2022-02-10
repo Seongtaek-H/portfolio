@@ -28,6 +28,13 @@ contactBtn.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
+// home fade-out as the window scroll
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
 //scroll fuction
 const scrollIntoView = (selector) => {
   const scrollTo = document.querySelector(selector);
