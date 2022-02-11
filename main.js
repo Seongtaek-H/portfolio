@@ -22,6 +22,14 @@ navbarMenu.addEventListener("click", (event) => {
   scrollIntoView(link);
 });
 
+// navbar toggle-btn for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+const home = document.querySelector(".home__container");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
+  home.classList.toggle("home__padding");
+});
+
 // home__contact Btn scroll
 const contactBtn = document.querySelector(".home__contact");
 contactBtn.addEventListener("click", () => {
@@ -29,7 +37,7 @@ contactBtn.addEventListener("click", () => {
 });
 
 // home fade-out as the window scroll
-const home = document.querySelector(".home__container");
+
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
